@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>推荐使用微信支付</title>
+    <link rel="shortcut icon" href="https://gtimg.wechatpay.cn/core/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="payment-container">
+        <div class="title">汇聚点滴爱心，共筑美好未来</div>
+        <div class="sub-title">您的每一份付出都将带来温暖</div>
+        <div class="amount-buttons" id="amount-buttons">
+            <button onclick="selectAmount(1)">1 元</button>
+            <button onclick="selectAmount(5)">5 元</button>
+            <button onclick="selectAmount(10)">10 元</button>
+            <button onclick="selectAmount(20)">20 元</button>
+            <button onclick="selectAmount(50)">50 元</button>
+            <button onclick="selectAmount(100)">100 元</button>
+        </div>
+        <div class="loading" id="loading1"></div>
+        <div class="qr-code" id="qr-code">
+            <img src="img/1.png" alt="二维码">
+            <div class="qr-code-overlay" id="qr-code-overlay"></div>
+            <button id="paid-button" onclick="clickPaidButton()">我已支付</button>
+        </div>
+        <div class="loading" id="loading2"></div>
+        <div class="input-box" id="input-box">
+            <input id="inp" type="text" placeholder="请输入支付单号">
+            <p id="text">支付单号不能为空！！！</p>
+            <button onclick="submitOrderNumber()">确定</button>
+        </div>
+        <div class="info-tip">解压密码通用，不必重复支付</div>
+        <div class="result" id="result">您的解压密码: <span id="pass"></span></div>
+    </div>
+    <div class="query-loading" id="query-loading">
+        <div class="loading"></div>
+        <p>查询中...</p>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
